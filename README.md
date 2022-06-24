@@ -1,6 +1,6 @@
 # Career Guidance Application
 
-<img src = "https://github.com/Sherin-Sneha/Caredance/assets/1.jpg" />
+<img src = "[https://github.com/Sherin-Sneha/Caredance/assets/1.jpg](https://github.com/Sherin-Sneha/Caredance/blob/main/assets/1.jpg)" />
 <img src = "https://github.com/Sherin-Sneha/Caredance/assets/4.jpg" />
 <img src = "https://github.com/Sherin-Sneha/Caredance/assets/5.jpg" />
 <img src = "https://github.com/Sherin-Sneha/Caredance/assets/7.jpg" />
