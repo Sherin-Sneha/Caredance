@@ -20,8 +20,8 @@ class Article {
         this.content});
   factory Article.fromJson(Map<String, dynamic> json) {
     return Article(
-      source: Source.fromJson(json['source']),
-      author: json['author'] as String,
+      source: Source.fromJson(json['source']!=null?json['source']:""),
+      author: json['author'],
       title: json['title'] as String,
       description: json['description'] as String,
       url: json['url'] as String,

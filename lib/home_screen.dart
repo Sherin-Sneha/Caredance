@@ -3,6 +3,9 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'rounded_button.dart';
 import 'article_model.dart';
 import 'api_service.dart';
+import 'package:flutter/scheduler.dart';
+
+
 
 User? loggedinUser;
 
@@ -62,7 +65,11 @@ class _HomeScreenState extends State<HomeScreen> {
                   height: 250,
                   width: 500,
                   decoration: BoxDecoration(
-                    //borderRadius: BorderRadius.circular(15.0),
+                      borderRadius: BorderRadius.only(
+                        bottomLeft: Radius.circular(36),
+                        bottomRight: Radius.circular(36),
+
+                      ),
                       image: DecorationImage(
                           fit: BoxFit.cover,
                           image: AssetImage('assets/images/caredance.png'))),
@@ -71,16 +78,7 @@ class _HomeScreenState extends State<HomeScreen> {
               Padding(
                 padding:
                 EdgeInsets.only(top: 10, left: 10, right: 10, bottom: 10),
-                // child: Text(
-                //   "Welcome User",
-                //   style: TextStyle(
-                //     color: Color(0xffffffff),
-                //     fontSize: 30,
-                //     //fontWeight: FontWeight.w300,
-                //     //fontFamily: "CassandraPersonalUseRegular",
-                //     fontFamily: "Montserrat",
-                //   ),
-                // ),
+
               ),
               InkWell(
                 onTap: () {Navigator.pushNamed(context, 'career_path');}, // Handle your callback.
@@ -204,10 +202,6 @@ class _HomeScreenState extends State<HomeScreen> {
                   child:Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.center,
-                    // children: [
-                    //   Text('Job News',
-                    //     style: TextStyle(fontSize: 20.0, color: Colors.black),),
-                    // ],
                   ),
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(15.0),
@@ -218,6 +212,44 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                 ),
               ),
+              Padding(
+                padding:
+                EdgeInsets.only(top: 10, left: 10, right: 10, bottom: 10),
+                child: Text(
+                  "",
+                  style: TextStyle(
+                    color: Color(0xffffffff),
+                    fontSize: 01,
+                    fontWeight: FontWeight.w300,
+                    fontFamily: "Roboto",
+                  ),
+                ),
+              ),
+              InkWell(
+                onTap: () {Navigator.pushNamed(context, 'assessment');}, // Handle your callback.
+                splashColor: Colors.brown.withOpacity(0.5),
+                child: Ink(
+                  height: 150,
+                  width: 400,
+                  padding: const EdgeInsets.only(top: 20, left: 20, right: 20, bottom: 20),
+                  child:Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    // children: [
+                    //   Text('Job News',
+                    //     style: TextStyle(fontSize: 20.0, color: Colors.black),),
+                    // ],
+                  ),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(15.0),
+                    image: DecorationImage(
+                      image: AssetImage("assets/images/blah.png"),
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                ),
+              ),
+
             ],
           ),
         )
